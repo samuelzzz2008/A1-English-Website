@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 5: Final Review Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9fafc;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffffff;
+      border-bottom: 2px solid #e0e0e0;
+      padding: 10px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+
+    .donate-btn {
+      background-color: #3b82f6;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .donate-btn:hover {
+      background-color: #2563eb;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 20% 1fr;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    nav {
+      background: #ffffff;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    nav h3 {
+      margin-top: 0;
+      font-size: 1.1em;
+    }
+
+    nav a {
+      display: block;
+      color: #2563eb;
+      text-decoration: none;
+      padding: 5px 0;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      transform: translateX(5px);
+      color: #1d4ed8;
+    }
+
+    main {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .breadcrumb a {
+      color: #2563eb;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+      color: #1d4ed8;
+    }
+
+    .text-box {
+      background: #f1f5f9;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 15px;
+      line-height: 1.8;
+    }
+
+    .text-box h4 {
+      margin-top: 0;
+      color: #2563eb;
+    }
+
+    .question {
+      margin: 10px 0;
+    }
+
+    input[type="text"] {
+      padding: 6px;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      width: 140px;
+      font-size: 1em;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    input[type="text"]:focus {
+      border-color: #2563eb;
+      outline: none;
+      box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+    }
+
+    .submit-btn {
+      background-color: #3b82f6;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 15px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #2563eb;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .correct {
+      color: green;
+    }
+
+    .incorrect {
+      color: red;
+    }
+
+    .next-btn {
+      display: inline-block;
+      background-color: #10b981;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .next-btn:hover {
+      background-color: #059669;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Modal Popup Background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Modal Box */
+.modal-box {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  animation: popIn 0.25s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SamPrep</div>
+    <a href="#" class="donate-btn" onclick="openDonate()">Donate</a>
+  </header>
+
+  <div class="container">
+    <nav>
+      <h3>Module 5: Final Review</h3>
+      <a href="Mod5unit1.html">Full A1 English Practice Test</a>
+    </nav>
+
+    <main>
+      <div class="breadcrumb">
+        <a href="HOME.html">Home</a> → 
+        <a href="Mod5unit1.html">Module 5</a> → 
+        Final Review
+      </div>
+
+      <h2>Module 5: Final A1 Review Test</h2>
+
+      <div class="text-box">
+        <h4>Fill in each blank. Review everything you learned from Modules 1–4!</h4>
+
+        <form id="quizForm">
+          <!-- Conversation (Module 1) -->
+          <div class="question">1. Hello! How are you? — I’m <input type="text" id="q1">, thank you.</div>
+          <div class="question">2. What’s your name? — My name <input type="text" id="q2"> Sam.</div>
+
+          <!-- Articles (Module 2) -->
+          <div class="question">3. This is <input type="text" id="q3"> apple.</div>
+          <div class="question">4. That is <input type="text" id="q4"> book.</div>
+
+          <!-- Pronouns + Verbs (Module 3) -->
+          <div class="question">5. <input type="text" id="q5"> am a teacher.</div>
+          <div class="question">6. She <input type="text" id="q6"> to school every day.</div>
+          <div class="question">7. They <input type="text" id="q7"> football on weekends.</div>
+
+          <!-- Prepositions (Module 4) -->
+          <div class="question">8. The cat is <input type="text" id="q8"> the table.</div>
+          <div class="question">9. The shoes are <input type="text" id="q9"> the bed.</div>
+          <div class="question">10. The bag is <input type="text" id="q10"> the chair.</div>
+
+          <!-- Review mix -->
+          <div class="question">11. Where <input type="text" id="q11"> the school?</div>
+          <div class="question">12. <input type="text" id="q12"> are my friends.</div>
+          <div class="question">13. The dog is <input type="text" id="q13"> the door.</div>
+          <div class="question">14. <input type="text" id="q14"> go to the market every Sunday.</div>
+          <div class="question">15. She <input type="text" id="q15"> a student.</div>
+
+          <button type="button" class="submit-btn" onclick="checkAnswers()">Submit Answers</button>
+        </form>
+
+        <div id="result" class="result"></div>
+
+        <a href="Index.html" class="next-btn">Return to Home</a>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function checkAnswers() {
+const answers = {
+  q1: ["fine", "good", "okay"],
+  q2: ["is", "'s"],
+  q3: ["an"],
+  q4: ["a", "one"],
+  q5: ["I", "i"],
+  q6: ["goes", "go"],
+  q7: ["play", "played"],
+  q8: ["on", "above"],
+  q9: ["under", "below"],
+  q10: ["next to", "beside"],
+  q11: ["is"],
+  q12: ["They", "they"],
+  q13: ["behind"],
+  q14: ["We", "we"],
+  q15: ["is", "was"]
+};
+
+
+      let score = 0;
+      let total = Object.keys(answers).length;
+
+      for (let key in answers) {
+        const userInput = document.getElementById(key).value.trim();
+        const acceptable = answers[key].map(ans => ans.toLowerCase());
+if (acceptable.includes(userInput.toLowerCase())) {
+          score++;
+          document.getElementById(key).style.borderColor = "green";
+        } else {
+          document.getElementById(key).style.borderColor = "red";
+        }
+      }
+
+      const result = document.getElementById("result");
+      if (score === total) {
+        result.innerHTML = `<span class="correct">🎉 Perfect! You got all ${score}/${total} correct! You’ve mastered the A1 level basics!</span>`;
+      } else if (score >= 10) {
+        result.innerHTML = `<span class="correct">✅ Great job! You got ${score}/${total} correct. Keep practicing!</span>`;
+      } else {
+        result.innerHTML = `<span class="incorrect">You got ${score}/${total} correct. Review the lessons again and try once more!</span>`;
+      }
+    }
+  </script>
+
+   <!-- Donate Popup Modal -->
+<div id="modal" class="modal-overlay">
+  <div class="modal-box">
+    <span class="close-btn" onclick="closeDonate()">✖</span>
+    <h3>Support SamPrep</h3>
+    <p>
+      [ALL DONATIONS ARE IN THE FORM OF RUPIAH]<br><br>
+      8090603974 BCA a.n. Samuel Victorino Rafael
+    </p>
+  </div>
+</div>
+
+<script>
+  function openDonate() {
+    document.getElementById('modal').style.display = 'flex';
+  }
+  function closeDonate() {
+    document.getElementById('modal').style.display = 'none';
+  }
+</script>
+</body>
+</html>

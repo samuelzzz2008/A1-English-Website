@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 2: The ABCs of Things (Nouns & Articles)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9fafc;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffffff;
+      border-bottom: 2px solid #e0e0e0;
+      padding: 10px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+
+    .donate-btn {
+      background-color: #3b82f6;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .donate-btn:hover {
+      background-color: #2563eb;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 20% 1fr;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    nav {
+      background: #ffffff;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    nav h3 {
+      margin-top: 0;
+      font-size: 1.1em;
+    }
+
+    nav a {
+      display: block;
+      color: #2563eb;
+      text-decoration: none;
+      padding: 5px 0;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      transform: translateX(5px);
+      color: #1d4ed8;
+    }
+
+    main {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .breadcrumb a {
+      color: #2563eb;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+      color: #1d4ed8;
+    }
+
+    /* Styled text box (replacing the video) */
+    .text-box {
+      background: #f1f5f9;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 15px;
+      line-height: 1.8;
+      font-size: 1em;
+    }
+
+    .text-box h4 {
+      margin-top: 0;
+      color: #2563eb;
+    }
+
+    .text-box table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .text-box th, .text-box td {
+      padding: 8px 10px;
+      text-align: left;
+    }
+
+    .text-box th {
+      background-color: #e2e8f0;
+    }
+
+    .text-box tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    .desc {
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .next-btn {
+      display: inline-block;
+      background-color: #3b82f6;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .next-btn:hover {
+      background-color: #2563eb;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+
+    /* Modal Popup Background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Modal Box */
+.modal-box {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  animation: popIn 0.25s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SamPrep</div>
+    <a href="#" class="donate-btn" onclick="openDonate()">Donate</a>
+  </header>
+
+  <div class="container">
+    <nav>
+      <h3>Module 2: The ABCs of Things (Nouns & Articles)</h3>
+      <a href="Mod2Unit1.html">Unit 1: Common Objects & Vocabulary</a>
+      <a href="Mod2Unit2.html">Unit 2: "A" and "An" (The Indefinite Article)</a>
+      <a href="Mod2Unit3.html">Unit 3: Quiz</a>
+    </nav>
+
+    <main>
+      <div class="breadcrumb">
+        <a href="Index.html">Home</a> → 
+        <a href="Mod2Unit2.html">Module 2</a> → 
+        Unit 2
+      </div>
+
+      <h2>Unit 2: Common Objects with Articles</h2>
+
+      <div class="text-box">
+        <h4>Common Objects with "A" or "An" and Their Indonesian Translations</h4>
+        <table>
+          <tr>
+            <th>English (with Article)</th>
+            <th>Indonesian Translation</th>
+          </tr>
+          <tr>
+            <td>A book</td>
+            <td>Sebuah buku</td>
+          </tr>
+          <tr>
+            <td>A chair</td>
+            <td>Sebuah kursi</td>
+          </tr>
+          <tr>
+            <td>A table</td>
+            <td>Sebuah meja</td>
+          </tr>
+          <tr>
+            <td>An apple</td>
+            <td>Sebuah apel</td>
+          </tr>
+          <tr>
+            <td>An orange</td>
+            <td>Sebuah jeruk</td>
+          </tr>
+          <tr>
+            <td>A pen</td>
+            <td>Sebuah pena</td>
+          </tr>
+          <tr>
+            <td>An umbrella</td>
+            <td>Sebuah payung</td>
+          </tr>
+          <tr>
+            <td>A bag</td>
+            <td>Sebuah tas</td>
+          </tr>
+          <tr>
+            <td>An egg</td>
+            <td>Sebuah telur</td>
+          </tr>
+          <tr>
+            <td>A cat</td>
+            <td>Sebuah kucing</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="desc">
+        <p>
+          Use <strong>"a"</strong> before words that start with a consonant sound, 
+          and <strong>"an"</strong> before words that start with a vowel sound (a, e, i, o, u).  
+          For example: <em>a pen</em>, <em>an apple</em>.  
+        </p>
+      </div>
+
+      <a href="Mod2Unit3.html" class="next-btn">Next: Unit 3 →</a>
+    </main>
+  </div>
+
+   <!-- Donate Popup Modal -->
+<div id="modal" class="modal-overlay">
+  <div class="modal-box">
+    <span class="close-btn" onclick="closeDonate()">✖</span>
+    <h3>Support SamPrep</h3>
+    <p>
+      [ALL DONATIONS ARE IN THE FORM OF RUPIAH]<br><br>
+      8090603974 BCA a.n. Samuel Victorino Rafael
+    </p>
+  </div>
+</div>
+
+<script>
+  function openDonate() {
+    document.getElementById('modal').style.display = 'flex';
+  }
+  function closeDonate() {
+    document.getElementById('modal').style.display = 'none';
+  }
+</script>
+</body>
+</html>

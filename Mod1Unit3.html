@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 1 - Unit 3: Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9fafc;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffffff;
+      border-bottom: 2px solid #e0e0e0;
+      padding: 10px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+
+    .donate-btn {
+      background-color: #3b82f6;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .donate-btn:hover {
+      background-color: #2563eb;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 20% 1fr;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    nav {
+      background: #ffffff;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    nav h3 {
+      margin-top: 0;
+      font-size: 1.1em;
+    }
+
+    nav a {
+      display: block;
+      color: #2563eb;
+      text-decoration: none;
+      padding: 5px 0;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      transform: translateX(5px);
+      color: #1d4ed8;
+    }
+
+    main {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .breadcrumb a {
+      color: #2563eb;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+      color: #1d4ed8;
+    }
+
+    .text-box {
+      background: #f1f5f9;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 15px;
+      line-height: 1.8;
+    }
+
+    .text-box h4 {
+      margin-top: 0;
+      color: #2563eb;
+    }
+
+    .question {
+      margin: 10px 0;
+    }
+
+    input[type="text"] {
+      padding: 6px;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      width: 50%;
+      font-size: 1em;
+      transition: all 0.2s ease;
+    }
+
+    input[type="text"]:focus {
+      border-color: #2563eb;
+      outline: none;
+      box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+    }
+
+    .submit-btn {
+      background-color: #3b82f6;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 15px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #2563eb;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .correct {
+      color: green;
+    }
+
+    .incorrect {
+      color: red;
+    }
+
+    /* Next button */
+    .next-btn {
+      display: inline-block;
+      background-color: #3b82f6;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .next-btn:hover {
+      background-color: #2563eb;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+
+    /* Modal Popup Background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Modal Box */
+.modal-box {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  animation: popIn 0.25s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SamPrep</div>
+    <a href="#" class="donate-btn" onclick="openDonate()">Donate</a>
+  </header>
+
+  <div class="container">
+    <nav>
+      <h3>Module 1: Everyday Conversation Skills</h3>
+      <a href="Mod1Unit1.html">Unit 1: Introducing Yourself</a>
+      <a href="Mod1Unit2.html">Unit 2: Phrases</a>
+      <a href="Mod1Unit3.html">Unit 3: Quiz</a>
+    </nav>
+
+    <main>
+      <div class="breadcrumb">
+        <a href="Index.html">Home</a> → 
+        <a href="Mod1Unit3.html">Module 1</a> → 
+        Unit 3
+      </div>
+
+      <h2>Unit 3: Test – Everyday Conversation</h2>
+
+      <div class="text-box">
+        <h4>Answer the questions below:</h4>
+
+        <form id="quizForm">
+          <div class="question">
+            1. What does "I'm fine" mean in Indonesian?<br>
+            <input type="text" id="q1" placeholder="Type your answer here...">
+          </div>
+
+          <div class="question">
+            2. How do you say "Terima kasih" in English?<br>
+            <input type="text" id="q2" placeholder="Type your answer here...">
+          </div>
+
+          <div class="question">
+            3. Translate "Selamat pagi" to English.<br>
+            <input type="text" id="q3" placeholder="Type your answer here...">
+          </div>
+
+          <div class="question">
+            4. What does "Goodbye" mean in Indonesian?<br>
+            <input type="text" id="q4" placeholder="Type your answer here...">
+          </div>
+
+          <div class="question">
+            5. Translate "Apa kabar?" into English.<br>
+            <input type="text" id="q5" placeholder="Type your answer here...">
+          </div>
+
+          <button type="button" class="submit-btn" onclick="checkAnswers()">Submit Answers</button>
+        </form>
+
+        <div id="result" class="result"></div>
+
+        <!-- Next Button -->
+        <a href="Mod2Unit1.html" class="next-btn">Next: Module 2 →</a>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      // Correct answers (case-insensitive)
+      const answers = {
+        q1: ["saya baik-baik saja", "saya baik"],
+        q2: ["thank you"],
+        q3: ["good morning"],
+        q4: ["sampai jumpa", "selamat tinggal"],
+        q5: ["how are you"]
+      };
+
+      let score = 0;
+      let total = 5;
+
+      for (let key in answers) {
+        const userInput = document.getElementById(key).value.trim().toLowerCase();
+        const correctList = answers[key];
+        if (correctList.includes(userInput)) {
+          score++;
+          document.getElementById(key).style.borderColor = "green";
+        } else {
+          document.getElementById(key).style.borderColor = "red";
+        }
+      }
+
+      const result = document.getElementById("result");
+      if (score === total) {
+        result.innerHTML = `<span class="correct">✅ Excellent! You got all ${score}/${total} correct!</span>`;
+      } else {
+        result.innerHTML = `<span class="incorrect">You got ${score}/${total} correct. Try again!</span>`;
+      }
+    }
+  </script>
+
+   <!-- Donate Popup Modal -->
+<div id="modal" class="modal-overlay">
+  <div class="modal-box">
+    <span class="close-btn" onclick="closeDonate()">✖</span>
+    <h3>Support SamPrep</h3>
+    <p>
+      [ALL DONATIONS ARE IN THE FORM OF RUPIAH]<br><br>
+      8090603974 BCA a.n. Samuel Victorino Rafael
+    </p>
+  </div>
+</div>
+
+<script>
+  function openDonate() {
+    document.getElementById('modal').style.display = 'flex';
+  }
+  function closeDonate() {
+    document.getElementById('modal').style.display = 'none';
+  }
+</script>
+</body>
+</html>

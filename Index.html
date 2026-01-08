@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Official IELTS A1 Prep</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #001f3f;
+      color: white;
+      padding: 10px 20px;
+    }
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .navbar-left input {
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: white;
+      border-bottom: 1px solid #ddd;
+    }
+    .hero h1 {
+      margin-bottom: 10px;
+    }
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Content */
+    .main {
+      margin: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+    .card h4 {
+      margin-top: 0;
+      color: #007bff;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+      columns: 2;
+    }
+    .card ul li {
+      margin: 5px 0;
+    }
+    .card ul li a {
+      color: #333;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-block;
+    }
+
+    .card ul li a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    .footer {
+      background: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    /* Popup Background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Popup Box */
+.modal-box {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  position: relative;
+  animation: pop-in 0.25s ease;
+}
+
+@keyframes pop-in {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+  <div id="modal" class="modal-overlay">
+  <div class="modal-box">
+    <span class="close-btn" onclick="closeDonate()">✖</span>
+    <h3>Support SamPrep</h3>
+    <p>
+      [ALL DONATIONS ARE IN THE FORM OF RUPIAH]<br><br>
+      8090603974 BCA a.n. Samuel Victorino Rafael
+
+    </p>
+  </div>
+</div>
+
+<script>
+  function openDonate() {
+    document.getElementById('modal').style.display = 'flex';
+  }
+  function closeDonate() {
+    document.getElementById('modal').style.display = 'none';
+  }
+</script>
+
+<body>
+
+
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="navbar-left">
+      <input type="text" id="searchInput" placeholder="Search" onkeyup="filterModules()">
+
+      <strong>SamPrep: Your Official IELTS A1 Prep Website</strong>
+    </div>
+    <div>
+      <a href="#" class="donate-btn" onclick="openDonate()">Donate</a>
+    </div>
+  </div>
+
+  
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Free IELTS Tutoring with SamPrep</h1>
+    <p>
+      Ready to start your journey into English but feel overwhelmed? Don't worry, we're here to help you get that all-important A1 grasp on the English language!<br><br>
+      Our program is your free, step-by-step guide to mastering the essentials of English. Instead of costly tutors, we provide you with a personalized, guided learning path to build your foundation from zero.
+    </p>
+    <a href="https://www.britishcouncilfoundation.id/en/exam/ielts/dates-fees-locations" 
+   class="btn" 
+   target="_blank">
+   Check IELTS Test Dates
+</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div class="card">
+      <h4>IELTS Introduction</h4>
+      <ul>
+        <li><a href="IELTSINTRO(1).html">Unit 1 — Introduction to the IELTS</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>Module 1: Everyday Conversation</h4>
+      <ul>
+        <li><a href="Mod1Unit1.html">Unit 1 — Introducing Yourself</a></li>
+        <li><a href="Mod1Unit2.html">Unit 2 — Phrases</a></li>
+        <li><a href="Mod1Unit3.html">Unit 3 — Quiz</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>Module 2: Articles & Objects</h4>
+      <ul>
+        <li><a href="Mod2Unit1.html">Unit 1 — Common Objects</a></li>
+        <li><a href="Mod2Unit2.html">Unit 2 — Articles</a></li>
+        <li><a href="Mod2Unit3.html">Unit 3 — Quiz</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>Module 3: Pronouns & Verbs</h4>
+      <ul>
+        <li><a href="Mod3Unit1.html">Unit 1 — Pronouns</a></li>
+        <li><a href="Mod3Unit2.html">Unit 2 — Simple Verbs</a></li>
+        <li><a href="Mod3Unit3.html">Unit 3 — Quiz</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>Module 4: Prepositions & Places</h4>
+      <ul>
+        <li><a href="Mod4unit1.html">Unit 1 — Prepositions</a></li>
+        <li><a href="Mod4unit2.html">Unit 2 — Places & Questions</a></li>
+        <li><a href="Mod4unit3.html">Unit 3 — Quiz</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>Module 5: Final Review Test</h4>
+      <ul>
+        <li><a href="Mod5unit1.html">Full A1 Final Exam</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2025 SamPrep. All rights reserved.</p>
+  </div>
+
+  <script>
+  function filterModules() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      if (text.includes(input)) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

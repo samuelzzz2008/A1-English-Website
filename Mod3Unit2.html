@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 3: All About Me (Pronouns & Simple Verbs)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9fafc;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffffff;
+      border-bottom: 2px solid #e0e0e0;
+      padding: 10px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+
+    .donate-btn {
+      background-color: #3b82f6;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .donate-btn:hover {
+      background-color: #2563eb;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 20% 1fr;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    nav {
+      background: #ffffff;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    nav h3 {
+      margin-top: 0;
+      font-size: 1.1em;
+    }
+
+    nav a {
+      display: block;
+      color: #2563eb;
+      text-decoration: none;
+      padding: 5px 0;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      transform: translateX(5px);
+      color: #1d4ed8;
+    }
+
+    main {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .breadcrumb a {
+      color: #2563eb;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+      color: #1d4ed8;
+    }
+
+    .text-box {
+      background: #f1f5f9;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 15px;
+      line-height: 1.8;
+      font-size: 1em;
+    }
+
+    .text-box h4 {
+      margin-top: 0;
+      color: #2563eb;
+    }
+
+    .text-box table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .text-box th, .text-box td {
+      padding: 8px 10px;
+      text-align: left;
+    }
+
+    .text-box th {
+      background-color: #e2e8f0;
+    }
+
+    .text-box tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    .desc {
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .next-btn {
+      display: inline-block;
+      background-color: #3b82f6;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .next-btn:hover {
+      background-color: #2563eb;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+
+    /* Modal Popup Background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Modal Box */
+.modal-box {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  animation: popIn 0.25s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SamPrep</div>
+    <a href="#" class="donate-btn" onclick="openDonate()">Donate</a>
+  </header>
+
+  <div class="container">
+    <nav>
+      <h3>Module 3: All About Me (Pronouns & Verb 'To Be')</h3>
+      <a href="Mod3Unit1.html">Unit 1: Personal Pronouns</a>
+      <a href="Mod3Unit2.html">Unit 2: Verb 'To Be' (Present Simple) (The Indefinite Article)</a>
+      <a href="Mod3Unit3.html">Unit 3: Quiz</a>
+    </nav>
+
+    <main>
+      <div class="breadcrumb">
+        <a href="Index.html">Home</a> → 
+        <a href="Mod3Unit2.html">Module 3</a> → 
+        Unit 2
+      </div>
+
+      <h2>Unit 2: Using Pronouns with Simple Verbs</h2>
+
+      <div class="text-box">
+        <h4>1. What Are Simple Verbs?</h4>
+        <p>
+          Simple verbs describe basic actions that happen in everyday life.  
+          They are easy to understand and form the foundation of English sentences.
+        </p>
+
+        <table>
+          <tr><th>Verb</th><th>Meaning (Indonesian)</th><th>Example Sentence</th></tr>
+          <tr><td>eat</td><td>makan</td><td>I eat rice every morning.</td></tr>
+          <tr><td>go</td><td>pergi</td><td>We go to school every day.</td></tr>
+          <tr><td>run</td><td>berlari</td><td>He runs fast.</td></tr>
+          <tr><td>read</td><td>membaca</td><td>She reads a book.</td></tr>
+          <tr><td>sleep</td><td>tidur</td><td>They sleep early at night.</td></tr>
+        </table>
+      </div>
+
+      <div class="text-box">
+        <h4>2. What Are Pronouns?</h4>
+        <p>
+          Pronouns are words that replace nouns (people, places, or things).  
+          Instead of repeating a name, we can use pronouns to make sentences shorter and clearer.
+        </p>
+
+        <table>
+          <tr><th>Pronoun</th><th>Meaning (Indonesian)</th><th>Example</th></tr>
+          <tr><td>I</td><td>Saya / Aku</td><td>I am a student.</td></tr>
+          <tr><td>You</td><td>Kamu / Anda</td><td>You are happy.</td></tr>
+          <tr><td>He</td><td>Dia (laki-laki)</td><td>He eats bread.</td></tr>
+          <tr><td>She</td><td>Dia (perempuan)</td><td>She reads a book.</td></tr>
+          <tr><td>It</td><td>Itu (benda/hewan)</td><td>It runs fast.</td></tr>
+          <tr><td>We</td><td>Kami / Kita</td><td>We go to school.</td></tr>
+          <tr><td>They</td><td>Mereka</td><td>They sleep early.</td></tr>
+        </table>
+      </div>
+
+      <div class="text-box">
+        <h4>3. Combining Pronouns with Verbs</h4>
+        <p>
+          When we combine pronouns and verbs, we create complete and meaningful sentences.  
+          Notice how the verb slightly changes depending on the pronoun (especially with “he”, “she”, or “it” — we usually add “s” to the verb).
+        </p>
+
+        <table>
+          <tr><th>Pronoun</th><th>Verb</th><th>Example Sentence</th></tr>
+          <tr><td>I</td><td>eat</td><td>I eat breakfast at 7 AM.</td></tr>
+          <tr><td>You</td><td>go</td><td>You go to work every day.</td></tr>
+          <tr><td>He</td><td>runs</td><td>He runs every morning.</td></tr>
+          <tr><td>She</td><td>reads</td><td>She reads a storybook.</td></tr>
+          <tr><td>It</td><td>jumps</td><td>It jumps on the table.</td></tr>
+          <tr><td>We</td><td>play</td><td>We play football after school.</td></tr>
+          <tr><td>They</td><td>sleep</td><td>They sleep at night.</td></tr>
+        </table>
+
+        <p><strong>Tip:</strong> Always remember — add “s” to verbs after <em>He, She, or It</em>.</p>
+      </div>
+
+      <div class="desc">
+        <p>
+          Practice saying these sentences aloud. Try replacing the pronouns and verbs to create new ones!  
+          Example: “I eat rice” → “He eats rice” → “They eat rice.”
+        </p>
+      </div>
+
+      <a href="Mod3Unit3.html" class="next-btn">Next: Unit 3 →</a>
+    </main>
+  </div>
+
+   <!-- Donate Popup Modal -->
+<div id="modal" class="modal-overlay">
+  <div class="modal-box">
+    <span class="close-btn" onclick="closeDonate()">✖</span>
+    <h3>Support SamPrep</h3>
+    <p>
+      [ALL DONATIONS ARE IN THE FORM OF RUPIAH]<br><br>
+      8090603974 BCA a.n. Samuel Victorino Rafael
+    </p>
+  </div>
+</div>
+
+<script>
+  function openDonate() {
+    document.getElementById('modal').style.display = 'flex';
+  }
+  function closeDonate() {
+    document.getElementById('modal').style.display = 'none';
+  }
+</script>
+</body>
+</html>
